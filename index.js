@@ -17,14 +17,14 @@ var db = new sqlite3.Database('rapp.db');
 //usage api here https://github.com/mapbox/node-sqlite3/wiki/API
 
 // async function dbinsert(table, col, val) {
-//   let sql = `INSERT INTO ${table} ${col} VALUES (${val});`;
-//   db.run(sql);
+//   let sql = `INSERT INTO ? ? VALUES (?);`;
+//   db.run(sql [table,col,val]);
 // }
 
 // async function dbselect(table, attr, val, num) {
 //   return await new Promise(function(resolve, reject) {
-//     let sql = `SELECT * FROM ${table} WHERE ${attr} = '${val}' LIMIT ${num};`;
-//     db.all(sql, [], async (err, rows) => {
+//     let sql = `SELECT * FROM ? WHERE ? = '?' LIMIT ?;`;
+//     db.all(sql, [table,attr,val,num], async (err, rows) => {
 //       resolve(rows)
 //     })
 //   });
